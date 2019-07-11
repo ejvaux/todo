@@ -20,7 +20,7 @@
                         @foreach ($todos as $todo)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$todo->date}}</td>
+                                <th>{{$todo->date->format('Y.m.d')}}</th>
                                 <td>{{$todo->title}}</td>
                                 <td>{{$todo->description}}</td>                                
                             </tr>
