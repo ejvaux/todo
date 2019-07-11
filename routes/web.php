@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('todo')->group(function () {
+    Route::get('input','TodoController@input');
+    Route::post('validate','TodoController@validation');
+    Route::post('insert','TodoController@insert');
+}); 
+
+
